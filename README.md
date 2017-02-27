@@ -47,6 +47,9 @@ the new syntax.
 
 <br />
 
+## You Do
+Take 15 minutes to read through this article: an [intro to ES6](http://blog.teamtreehouse.com/get-started-ecmascript-6) from the Treehouse blog.  If you have time leftover, you can read about the differences between [ES5, ES2015 and Typescript](https://johnpapa.net/es5-es2015-typescript/).
+
 ## New Features
 
 ### Block Scope
@@ -376,3 +379,4 @@ There are lots more features of ES6 that we have not covered:
 - [Block Scope](https://www.sitepoint.com/joys-block-scoping-es6/)
 - [Destructuring](http://www.2ality.com/2015/01/es6-destructuring.html)
 - [Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_template_literals)
+- [More History](https://benmccormick.org/2015/09/14/es5-es6-es2016-es-next-whats-going-on-with-javascript-versioning/)
