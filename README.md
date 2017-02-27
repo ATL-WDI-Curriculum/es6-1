@@ -376,6 +376,3 @@ There are lots more features of ES6 that we have not covered:
 - [Block Scope](https://www.sitepoint.com/joys-block-scoping-es6/)
 - [Destructuring](http://www.2ality.com/2015/01/es6-destructuring.html)
 - [Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_template_literals)
-
-## Additional Practice
-You can also check out the exercises in the exercises folder for more practice in ES6.
