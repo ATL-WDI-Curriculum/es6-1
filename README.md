@@ -442,7 +442,7 @@ nums;
 > [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
-The spread operator also makes it very easy to create copies of an array in functions where mutation occurs:
+<!-- The spread operator also makes it very easy to create copies of an array in functions where mutation occurs:
 
 ```js
 var days = ["monday","tuesday","wednesday","thursday","friday","saturday","sunday"];
@@ -475,7 +475,7 @@ function reversedDays(arr){
 }
 console.log(reversedDays(days));
 console.log(days);
-```
+``` -->
 
 <br />
 
