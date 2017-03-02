@@ -48,7 +48,7 @@ the new syntax.
 <br />
 
 ## You Do
-Take 15 minutes to read through this article: an [intro to ES6](http://blog.teamtreehouse.com/get-started-ecmascript-6) from the Treehouse blog.  If you have time leftover, you can read about the differences between [ES5, ES2015 and Typescript](https://johnpapa.net/es5-es2015-typescript/).
+Take 20 minutes to read through this article: an [intro to ES6](http://blog.teamtreehouse.com/get-started-ecmascript-6) from the Treehouse blog.  If you have time leftover, you can read about the differences between [ES5, ES2015 and Typescript](https://johnpapa.net/es5-es2015-typescript/).
 
 ## New Features
 
