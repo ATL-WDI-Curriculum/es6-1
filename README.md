@@ -81,7 +81,7 @@ If you wanted block level scope in ES5, you would need to use functions- either 
 
 [Let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let): ES2015 introduces the concept of block scoping, which allows us to limit the scope of a variable declared with `let` to a given block `{ ... }`. It also avoids variables hoisting, as a variable is only declared/assigned where it exists within our code.
 
-Functions in ES5:
+Scope in ES5:
 
 ```js
 // ES5
@@ -96,7 +96,7 @@ myFunction();
 // will print out 1, 2
 ```
 
-versus 2015
+Scope in ES2015
 
 ```js
 // ES2015
