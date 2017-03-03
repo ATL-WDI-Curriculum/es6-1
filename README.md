@@ -94,7 +94,7 @@ myFunction();
 // will print out 1, 2
 ```
 
-[let](http://es6-features.org/#BlockScopedVariables): ES2015 introduces the concept of block scoping, which allows us to limit the scope of a variable declared with `let` to a given block `{ ... }`. It also avoids variables hoisting, as a variable is only declared/assigned where it exists within our code.
+[Let](http://es6-features.org/#BlockScopedVariables): ES2015 introduces the concept of block scoping, which allows us to limit the scope of a variable declared with `let` to a given block `{ ... }`. It also avoids variables hoisting, as a variable is only declared/assigned where it exists within our code.
 
 ```js
 // ES2015
@@ -150,9 +150,12 @@ var a = 2;
 
 <br />
 
-### Default parameters
+### Default Parameters
 
-With ES2015, we now have the option to set default values for any of our functions' parameters.
+[Default Parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters): With ES2015, we now have the option to set default values for any of our functions' parameters.
+
+
+In ES5, we had to use the 'or' expression in order to create a default.  However, in ES6, you can set a default within your function's parens.
 
 ```js
 // ES5
@@ -163,6 +166,7 @@ function hello(name){
 
 hello(); // Hello, stranger
 hello("Jesse"); // Hello, Jesse
+```
 
 ```js
 // ES2015
