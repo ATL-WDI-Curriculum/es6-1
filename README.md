@@ -96,7 +96,7 @@ myFunction();
 // will print out 1, 2
 ```
 
-Scope in ES2015
+Scope in ES2015:
 
 ```js
 // ES2015
