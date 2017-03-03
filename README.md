@@ -184,7 +184,7 @@ The ES2015 way is generally better because you won't have 'or' expressions all o
 
 ### Destructuring
 
-The [destructuring](http://es6-features.org/#ArrayMatching) assignment makes it possible to extract data from complex data types (arrays and objects) into distinct variables:
+[Destructuring](http://es6-features.org/#ArrayMatching): The destructuring assignment makes it possible to extract data from complex data types (arrays and objects) into distinct variables:
 
 ```js
 let [a, b] = [1, 2];
@@ -229,7 +229,7 @@ If you are destructuring an object, you would surround the desired variables wit
 
 ### Concise Object Properties and Methods
 
-ES2015 allows us to use [property shorthand](http://es6-features.org/#PropertyShorthand) to shorten method definitions:
+[Property Shorthand](http://es6-features.org/#PropertyShorthand): ES2015 allows us to use property shorthand to shorten method definitions.  For functions within objects, you can leave out the `function` keyword, and just add parens to the `key`, like in the **drive()** example below.
 
 ```js
 // ES5
@@ -273,7 +273,7 @@ let obj = {x, y};
 
 ### Template Literals
 
-[Template literals](http://es6-features.org/#StringInterpolation) can help you build the string values that you might want to assign to a variable.  
+[Template literals](http://es6-features.org/#StringInterpolation): Template literals can help you build the string values that you might want to assign to a variable.  
 
 Here is how we previously used variables as placeholders in order to evaluate strings/concatenate variables with strings.
 
@@ -338,7 +338,7 @@ console.log("Hello.\n" +
 
 ### Arrow Functions
 
-[Arrow functions](http://es6-features.org/#ExpressionBodies) are the new shorthand syntax for defining anonymous functions.  Arrow functions gets its name from its syntax `=>`, which in other languages, is knows as: the fat arrow, the rocket or the Lamda operator.
+[Arrow functions](http://es6-features.org/#ExpressionBodies): Arrow functions are the new shorthand syntax for defining anonymous functions.  Arrow functions gets its name from its syntax `=>`, which in other languages, is knows as: the fat arrow, the rocket or the Lamda operator.
 
 ```js
 // ES5
@@ -433,9 +433,9 @@ If you need to support a legacy browser (depending on your user), check out the 
 
 ### Spread Operator
 
-The spread operator `...` allows an expression to be expanded into multiple elements.
+[Spread Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator): The spread operator `...` allows an expression (like an array) to be expanded into multiple elements.
 
-This is useful when you would like to separate an array into individual elements:
+This make separating an array into individual elements incredibly simple. In ES5, you would need to use the index of each array item in order to get access to that value/send in that value as an argument.
 
 ```js
 // ES5
@@ -446,6 +446,9 @@ var volume = function(height, width, length) {
 
 volume(dimensions[0], dimensions[1], dimensions[2]);
 ```
+
+In ES6, you can just use the spread operator, which makes your code more dry and easier to understand.
+
 
 ```js
 // ES2015
@@ -467,7 +470,7 @@ nums;
 > [1, 2, 3, [4, 5, 6], 7, 8, 9]
 ```
 
-Notice that without the spread operator, the array doesn't just get the values of 'a'.  It actually creates an array of a within the nums array.  
+Notice that without the spread operator (in ES5), the array doesn't just add in the values from the 'a' array.  It actually imports the whole array (at index 3) within the nums array, creating an array within an array.
 
 The spread operator will seamlessly add the two arrays together.
 
