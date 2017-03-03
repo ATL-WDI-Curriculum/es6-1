@@ -77,6 +77,8 @@ If you wanted block level scope in ES5, you would need to use functions- either 
 
 </details>
 
+<br />
+
 #### `let`
 
 [Let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let): ES2015 introduces the concept of block scoping, which allows us to limit the scope of a variable declared with `let` to a given block `{ ... }`. It also avoids variables hoisting, as a variable is only declared/assigned where it exists within our code.
