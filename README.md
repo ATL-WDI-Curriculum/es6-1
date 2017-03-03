@@ -94,7 +94,7 @@ myFunction();
 // will print out 1, 2
 ```
 
-[Let](http://es6-features.org/#BlockScopedVariables): ES2015 introduces the concept of block scoping, which allows us to limit the scope of a variable declared with `let` to a given block `{ ... }`. It also avoids variables hoisting, as a variable is only declared/assigned where it exists within our code.
+[Let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let): ES2015 introduces the concept of block scoping, which allows us to limit the scope of a variable declared with `let` to a given block `{ ... }`. It also avoids variables hoisting, as a variable is only declared/assigned where it exists within our code.
 
 ```js
 // ES2015
@@ -132,7 +132,7 @@ console.log("outside loop:", j);
 
 #### `const`
 
-[Const](http://es6-features.org/#Constants): ES2015 introduces another keyword for declaring variables called `const`. `const` is an identifier for variables that can not be reassigned and are considered read only variables. It is not a constant variable, but a constant reference to your variable.
+[Const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const): ES2015 introduces another keyword for declaring variables called `const`. `const` is an identifier for variables that can not be reassigned and are considered read only variables. It is not a constant variable, but a constant reference to your variable.
 
 In ES5, if you want to declare a variable that should remain constant, it is a common practice to write the name in all uppercase letters.  However, this will not prevent the variable from being reassigned. It is used more as a note to other developers about your intention for that variable.
 
@@ -184,7 +184,7 @@ The ES2015 way is generally better because you won't have 'or' expressions all o
 
 ### Destructuring
 
-[Destructuring](http://es6-features.org/#ArrayMatching): The destructuring assignment makes it possible to extract data from complex data types (arrays and objects) into distinct variables:
+[Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment): The destructuring assignment makes it possible to extract data from complex data types (arrays and objects) into distinct variables:
 
 ```js
 let [a, b] = [1, 2];
@@ -229,7 +229,7 @@ If you are destructuring an object, you would surround the desired variables wit
 
 ### Concise Object Properties and Methods
 
-[Property Shorthand](http://es6-features.org/#PropertyShorthand): ES2015 allows us to use property shorthand to shorten method definitions.  For functions within objects, you can leave out the `function` keyword, and just add parens to the `key`, like in the **drive()** example below.
+[Property Shorthand](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer): ES2015 allows us to use property shorthand to shorten method definitions.  For functions within objects, you can leave out the `function` keyword, and just add parens to the `key`, like in the **drive()** example below.
 
 ```js
 // ES5
@@ -273,7 +273,7 @@ let obj = {x, y};
 
 ### Template Literals
 
-[Template literals](http://es6-features.org/#StringInterpolation): Template literals can help you build the string values that you might want to assign to a variable.  
+[Template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_template_literals): Template literals can help you build the string values that you might want to assign to a variable.  
 
 Here is how we previously used variables as placeholders in order to evaluate strings/concatenate variables with strings.
 
@@ -338,7 +338,7 @@ console.log("Hello.\n" +
 
 ### Arrow Functions
 
-[Arrow functions](http://es6-features.org/#ExpressionBodies): Arrow functions are the new shorthand syntax for defining anonymous functions.  Arrow functions gets its name from its syntax `=>`, which in other languages, is knows as: the fat arrow, the rocket or the Lamda operator.
+[Arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions): Arrow functions are the new shorthand syntax for defining anonymous functions.  Arrow functions gets its name from its syntax `=>`, which in other languages, is knows as: the fat arrow, the rocket or the Lamda operator.
 
 ```js
 // ES5
@@ -531,18 +531,34 @@ There are a lot of features in ES6 that we have not covered:
 <br />
 
 ## Resources
+- [Const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
 - [Const](http://es6-features.org/#Constants)
+- [Let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
 - [Let](http://es6-features.org/#BlockScopedVariables)
 - [Block Scope](https://www.sitepoint.com/joys-block-scoping-es6/)
+- [Default Parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+- [Arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 - [Arrow Functions](http://es6-features.org/#ExpressionBodies)
-- [Template Literals](http://es6-features.org/#StringInterpolation)
 - [Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_template_literals)
+- [Template Literals](http://es6-features.org/#StringInterpolation)
+- [Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 - [Destructuring](http://es6-features.org/#ArrayMatching)
 - [Destructuring](http://www.2ality.com/2015/01/es6-destructuring.html)
+- [Property Shorthand](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
 - [Property Shorthand](http://es6-features.org/#PropertyShorthand)
+- [Spread Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)
 
+<br />
+
+## More Resources
 - [You Don't Know ES6](https://github.com/getify/You-Dont-Know-JS/tree/master/es6%20%26%20beyond)
 - [More History](https://benmccormick.org/2015/09/14/es5-es6-es2016-es-next-whats-going-on-with-javascript-versioning/)
 - [ES6 Compatibility](https://kangax.github.io/compat-table/es6/)
 - [Can I Use](http://caniuse.com/)
+
+<br />
+
+## Articles
 - [JavaScript Tips](http://javascriptissexy.com/12-simple-yet-powerful-javascript-tips/)
+- [Getting Started with ECMAScript 6](http://blog.teamtreehouse.com/get-started-ecmascript-6)
+- [Understanding ES5, ES2015 and TypeScript](https://johnpapa.net/es5-es2015-typescript/).
