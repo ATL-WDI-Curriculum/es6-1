@@ -68,8 +68,6 @@ In short, it is the notion of which variables are available where.
 
 </details>
 
----
-
 <details>
 <summary>So far in class, what is the primary way to control scope in JS?</summary>
 
