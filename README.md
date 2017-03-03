@@ -53,6 +53,8 @@ Take 15 minutes to read through this article: [Getting Started with ECMAScript 6
 
 Make sure that if you are using Chrome, you enable the experimental javascript flag by going to [Chrome Flags](chrome://flags). And then relaunch Chrome.
 
+<br />
+
 ## New Features
 
 ### Block Scope
@@ -78,7 +80,7 @@ If you wanted block level scope in ES5, you would need to use functions- either 
 Functions in ES5:
 
 ```js
-// es5
+// ES5
 var a = 1;
 function myFunction() {
   a = 2;
@@ -90,10 +92,10 @@ myFunction();
 // will print out 1, 2
 ```
 
-ES6 introduces the concept of block scoping, which allows us to limit the scope of a variable declared with `let` to a given block `{ ... }`. It also avoids variables hoisting, as a variable is only declared/assigned where it exists within our code.
+ES2015 introduces the concept of block scoping, which allows us to limit the scope of a variable declared with `let` to a given block `{ ... }`. It also avoids variables hoisting, as a variable is only declared/assigned where it exists within our code.
 
 ```js
-// es6
+// ES2015
 var a = 1;
 {
   let a = 2;
@@ -124,6 +126,8 @@ console.log("outside loop:", j);
 // because of block scope, j will not be available outside of the for block
 ```
 
+<br />
+
 #### `const`
 
 ES2015 introduces another keyword for declaring variables: `const`
@@ -144,6 +148,8 @@ const a = 2;
 var a = 2;
 // throws an error
 ```
+
+<br />
 
 ### Default parameters
 
@@ -170,6 +176,8 @@ hello("Jesse"); // Hello, Jesse
 ```
 
 The ES2015 way is generally better because you won't have 'or' expressions all over your code.
+
+<br />
 
 ### Destructuring
 
@@ -214,6 +222,8 @@ function greetUser({ name, location })  {
 
 If you are destructuring an object, you would surround the desired variables with curly braces, which will make it look like you are creating an object literal, but you are really just building an assignment statement.  You will want to pick off specific properties in the object.
 
+<br />
+
 ### Concise Object Properties and Methods
 
 ES2015 allows us to shorten method definitions from:
@@ -253,6 +263,8 @@ let y = 2;
 
 let obj = {x, y};
 ```
+
+<br />
 
 ### Template Literals
 
@@ -316,6 +328,8 @@ console.log("Hello.\n" +
 "You killed my " + killee +".\n" + 
 "Prepare to " + prepareTo + ".");
 ```
+
+<br />
 
 ### Arrow Functions
 
@@ -387,6 +401,8 @@ let add = (x, y) => {
 }
 add(2, 3);
 ```
+
+<br />
 
 ## Legacy Browser Support
 
