@@ -53,7 +53,7 @@ Take 15 minutes to read through this article: [Getting Started with ECMAScript 6
 
 ## Support Modern Browsers
 
-Make sure that if you are using Chrome, you enable the experimental javascript flag by going to Chrome Flags(chrome://flags). And then relaunch Chrome.
+Make sure that if you are using Chrome, you enable the experimental javascript flag by going to Chrome Flags (chrome://flags). And then relaunch Chrome.
 
 <br />
 
