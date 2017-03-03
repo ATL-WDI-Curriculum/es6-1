@@ -92,7 +92,7 @@ myFunction();
 // will print out 1, 2
 ```
 
-ES2015 introduces the concept of block scoping, which allows us to limit the scope of a variable declared with `let` to a given block `{ ... }`. It also avoids variables hoisting, as a variable is only declared/assigned where it exists within our code.
+ES2015 introduces the concept of block scoping, which allows us to limit the scope of a variable declared with [let](http://es6-features.org/#BlockScopedVariables) to a given block `{ ... }`. It also avoids variables hoisting, as a variable is only declared/assigned where it exists within our code.
 
 ```js
 // ES2015
@@ -130,7 +130,7 @@ console.log("outside loop:", j);
 
 #### `const`
 
-ES2015 introduces another keyword for declaring variables: `const`
+ES2015 introduces another keyword for declaring variables: [const]([Const](http://es6-features.org/#Constants))
 
 In ES5, if you want to declare a variable that will remain constant, it is a common practice to write the name in all uppercase letters.  However, this will not prevent the variable from being reassigned, but it is more of a note to other developers about your intention.
 
@@ -181,7 +181,7 @@ The ES2015 way is generally better because you won't have 'or' expressions all o
 
 ### Destructuring
 
-The destructuring assignment makes it possible to extract data from complex data types (arrays and objects) into distinct variables:
+The [destructuring](http://es6-features.org/#ArrayMatching) assignment makes it possible to extract data from complex data types (arrays and objects) into distinct variables:
 
 ```js
 let [a, b] = [1, 2];
@@ -226,9 +226,10 @@ If you are destructuring an object, you would surround the desired variables wit
 
 ### Concise Object Properties and Methods
 
-ES2015 allows us to shorten method definitions from:
+ES2015 allows us to use [property shorthand](http://es6-features.org/#PropertyShorthand) to shorten method definitions:
 
 ```js
+// ES5
 var car = {
   drive: function(){
     console.log("vroom vroom");
@@ -239,6 +240,7 @@ var car = {
 to
 
 ```js
+// ES2015
 let car = {
   drive() {
     console.log("vroom vroom");
@@ -268,7 +270,7 @@ let obj = {x, y};
 
 ### Template Literals
 
-Template literals can help you build the string values that you might want to assign to a variable.  
+[Template literals](http://es6-features.org/#StringInterpolation) can help you build the string values that you might want to assign to a variable.  
 
 Here is how we previously used variables as placeholders in order to evaluate strings/concatenate variables with strings.
 
@@ -333,7 +335,7 @@ console.log("Hello.\n" +
 
 ### Arrow Functions
 
-Arrow functions are the new shorthand syntax for defining anonymous functions.  Arrow functions gets its name from its syntax `=>`, which in other languages, is knows as: the fat arrow, the rocket or the Lamda operator.
+[Arrow functions](http://es6-features.org/#ExpressionBodies) are the new shorthand syntax for defining anonymous functions.  Arrow functions gets its name from its syntax `=>`, which in other languages, is knows as: the fat arrow, the rocket or the Lamda operator.
 
 ```js
 // ES5
@@ -426,7 +428,7 @@ If you need to support a legacy browser (depending on your user), check out the 
 
 ## Bonus
 
-### Spread operator
+### Spread Operator
 
 The spread operator `...` allows an expression to be expanded into multiple elements.
 
@@ -519,6 +521,8 @@ There are a lot of features in ES6 that we have not covered:
 - [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 - [Classes](http://es6-features.org/#ClassDefinition)
 - [Inheritance](http://es6-features.org/#ClassInheritance)
+
+<br />
 
 ## Resources
 - [Const](http://es6-features.org/#Constants)
