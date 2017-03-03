@@ -1,9 +1,9 @@
-#ES6
+#ES2015
 
 ## Learning Objectives
 
 - Explain the history of ES and JS
-- Compare/contrast features of ES5 and ES6
+- Compare/contrast features of ES5 and ES2015
 - Explain when to use `var` vs `let` vs `const`
 - Use template literals to interpolate variables and strings
 - Use deconstruction to extract values from objects and arrays
@@ -11,15 +11,15 @@
 
 ## Framing
 
-Today, we are going to be looking at a new way to write Javascript by playing with some of the new features released in ES6.
+Today, we are going to be looking at a new way to write Javascript by playing with some of the new features released in ES2015.
 
 #### JS vs ES
 
-As mentioned previously, JavaScript standard is officially referred to as [ECMAScript](https://en.wikipedia.org/wiki/ECMAScript).
+As mentioned previously, the JavaScript standard is officially referred to as [ECMAScript](https://en.wikipedia.org/wiki/ECMAScript).
 
-As JS is so widely used, there is a body known as [TC39](https://www.ecma-international.org/memento/TC39.htm) or [ECMA International](https://www.ecma-international.org/), which formally approves official versions for release.
+As JS is so widely used, there is a body known as [TC39](https://www.ecma-international.org/memento/TC39.htm) or [ECMA International](https://www.ecma-international.org/), which formally approves official versions for its release.
 
-Each version contains features/changes to be added to the language.
+Each version contains features and changes that are added onto the language.
 
 In short, I like to think of ECMAScript as the language, and JavaScript as an implementation of that language.
 
@@ -37,20 +37,21 @@ Condensed timeline:
 #### Why now?
 
 Many plugins, frameworks and modules still use ES5, as browser support for
-the new version of the language is [still not universal](http://caniuse.com/#search=es6), but the new syntax and features
-of ES6 are increasingly becoming more and more popular among many open-source projects and in the developing world at large. Also, you are very likely to see it pop up in the documentation of some of the technologies we will be using in this course.
+the new version of the language is [still not universal](http://caniuse.com/#search=es6), but the new syntax and features of ES2015 are increasingly becoming more and more popular among many open-source projects and in the developing world at large. Also, you are very likely to see it pop up in the documentation of some of the technologies we will be using in this course.
 
 Today is all about exploring some of the [new features](https://github.com/lukehoban/es6features) and getting comfortable with
 the new syntax.
 
-> For more backstory, we recommend checking out [this talk](https://www.youtube.com/watch?v=PlmsweSNhTw) from Brendan Eich on what he views as the future of JS.
+> For a more complete backstory, we recommend checking out [this talk](https://www.youtube.com/watch?v=PlmsweSNhTw) from Brendan Eich on what he views as the future of JS.
 
 <br />
 
 ## You Do
-Take 20 minutes to read through this article: [Getting Started with ECMAScript 6](http://blog.teamtreehouse.com/get-started-ecmascript-6) from the Treehouse blog.  If you have time leftover, you can read about the differences between [Understanding ES5, ES2015 and TypeScript](https://johnpapa.net/es5-es2015-typescript/).
+Take 15 minutes to read through this article: [Getting Started with ECMAScript 6](http://blog.teamtreehouse.com/get-started-ecmascript-6) from the Treehouse blog.  If you have time leftover, you can read about the differences between [Understanding ES5, ES2015 and TypeScript](https://johnpapa.net/es5-es2015-typescript/).
 
-Also- enable experimental JS in Chrome [Chrome Flags](chrome://flags)
+## Support Modern Browsers
+
+Make sure that if you are using Chrome, you enable the experimental javascript flag by going to [Chrome Flags](chrome://flags). And then relaunch Chrome.
 
 ## New Features
 
@@ -59,7 +60,7 @@ Also- enable experimental JS in Chrome [Chrome Flags](chrome://flags)
 <details>
 <summary>What does the concept of scope refer to in JS?</summary>
 
-In short, the notion of which variables are available where.
+In short, it is the notion of which variables are available where.
 
 </details>
 
@@ -68,7 +69,7 @@ In short, the notion of which variables are available where.
 <details>
 <summary>So far in class, what is the primary way to control scope in JS?</summary>
 
-If you wanted block level scope in ES5, you would need to use functions- either a regular function or an IIFE.
+If you wanted block level scope in ES5, you would need to use functions- either a regular function or an IIFE (immediately invoked function expression.
 
 </details>
 
@@ -105,16 +106,16 @@ console.log(a);
 You are more likely to see `let` declarations inside an `if` or `for` block because of the block scoping capability:
 
 ```js
-// es5
+// ES5
 for(var i = 0; i < 10; i++){
   console.log(i);
 }
 console.log("outside loop:", i);
 // still have access to i outside of the loop
+```
 
-// versus
-
-// es6
+```js
+// ES2015
 for(let j = 0; j < 10; j++){
   console.log(j);
 }
@@ -122,9 +123,10 @@ console.log("outside loop:", j);
 // throws an error
 // because of block scope, j will not be available outside of the for block
 ```
+
 #### `const`
 
-ES6 introduces another keyword for declaring variables: `const`
+ES2015 introduces another keyword for declaring variables: `const`
 
 In ES5, if you want to declare a variable that will remain constant, it is a common practice to write the name in all uppercase letters.  However, this will not prevent the variable from being reassigned, but it is more of a note to other developers about your intention.
 
@@ -145,9 +147,10 @@ var a = 2;
 
 ### Default parameters
 
-With ES6, we now have the option to set default values for any of our functions' parameters.
+With ES2015, we now have the option to set default values for any of our functions' parameters.
 
-```ES5
+```js
+// ES5
 function hello(name){
     name = name || "Frankie P";
     console.log("Hello, " + name);
@@ -156,7 +159,8 @@ function hello(name){
 hello(); // Hello, stranger
 hello("Jesse"); // Hello, Jesse
 
-```ES6
+```js
+// ES2015
 function hello(name = "stranger"){
     console.log("Hello, " + name);
 }
@@ -165,16 +169,14 @@ hello(); // Hello, stranger
 hello("Jesse"); // Hello, Jesse
 ```
 
-The ES6 way is generally better because you won't have 'or' expressions all over your code.
+The ES2015 way is generally better because you won't have 'or' expressions all over your code.
 
 ### Destructuring
 
-The destructuring assignment makes it possible to extract data from complex data
-types (arrays and objects) into distinct variables:
+The destructuring assignment makes it possible to extract data from complex data types (arrays and objects) into distinct variables:
 
 ```js
 let [a, b] = [1, 2];
-// What is on the left looks like an array literal, but you are actually working with individual variables, and surrounding them with square brackets because you are destructuring an array. You are telling the first value in the array to assign itself to 'a', and the second value to assign itself to 'b'.
 a; //= 1
 b; //= 2
 let nums = [1, 2, 3, 4, 5];
@@ -184,7 +186,9 @@ second; //= 2
 third; //= 3
 ```
 
-This also applies to objects:
+What is on the left([a, b]), looks like an array literal, but you are actually working with individual variables, and surrounding them with square brackets because you are destructuring an array. You are telling the first value in the array to assign itself to 'a', and the second value to assign itself to 'b'.
+
+Destructuring also applies to objects:
 
 ```js
 var user = {
@@ -200,19 +204,19 @@ function greetUser (user) {
     console.log("Hello " + user.name + ", how's the weather in " + user.location + "?");
 }
 
-// In ES6 this becomes:
+// In ES2015 this becomes:
 function greetUser({ name, location })  {
     console.log("Hello " + name + ", how's the weather in " + location + "?");
 }
 // You would call both by using: greetUser(user);
 
-// If you are destructuring an object, you would surround the desired variables with curly braces, which will make it look like you are creating an object literal, but you are really just building an assignment statement.  You will want to pick off specific properties in the object.
-
 ```
+
+If you are destructuring an object, you would surround the desired variables with curly braces, which will make it look like you are creating an object literal, but you are really just building an assignment statement.  You will want to pick off specific properties in the object.
 
 ### Concise Object Properties and Methods
 
-ES6 allows us to shorten method definitions from:
+ES2015 allows us to shorten method definitions from:
 
 ```js
 var car = {
@@ -243,11 +247,11 @@ var obj = {x:x, y:y};
 ```
 
 ```js
-// ES6
+// ES2015
 let x = 1;
 let y = 2;
 
-let obj = {x,y};
+let obj = {x, y};
 ```
 
 ### Template Literals
@@ -255,6 +259,7 @@ let obj = {x,y};
 Template literals can help you build the string values that you might want to assign to a variable.  
 
 Here is how we previously used variables as placeholders in order to evaluate strings/concatenate variables with strings.
+
 ```js
 // ES5
 var name = "Inigo Montoya";
@@ -268,10 +273,10 @@ console.log("Hello.\n" +
 "Prepare to " + prepareTo + ".");
 ```
 
-In ES6, we can interpolate variables using template literal syntax: '(`)' (backticks), and replace string concatenation code
+In ES2015, we can interpolate variables using template literal syntax: '(`)' (backticks), and replace the long-winded ES5 string concatenation code.
 
 ```js
-// ES6
+// ES2015
 let name = "Inigo Montoya";
 let killee = "father";
 let prepareTo = "die";
@@ -279,7 +284,26 @@ let prepareTo = "die";
 console.log(`Hello. My name is ${name}. You killed my ${killee}. Prepare to ${prepareTo}.`);
 ```
 
-A template literal can also be on many lines. 
+A template literal can also be on multiple lines and it would still be valid! 
+
+```js
+// ES2015
+let name = "Inigo Montoya";
+let killee = "father";
+let prepareTo = "die";
+
+console.log(
+  `
+    Hello. 
+    My name is ${name}. 
+    You killed my ${killee}. 
+    Prepare to ${prepareTo}.
+  `
+);
+// So concise!  
+```
+
+As opposed to this:
 
 ```js
 // ES5
@@ -293,27 +317,9 @@ console.log("Hello.\n" +
 "Prepare to " + prepareTo + ".");
 ```
 
-```js
-// ES6
-let name = "Inigo Montoya";
-let killee = "father";
-let prepareTo = "die";
-
-console.log(
-  `
-    Hello. 
-    My name is ${name}. 
-    You killed my ${killee}. 
-    Prepare to ${prepareTo}.
-  `
-);
-```
-
-And it would still be valid.
-
 ### Arrow Functions
 
-Arrow functions are a new shorthand syntax for defining anonymous functions.  It gets its name from the syntax `=>`, which in other languages, is knows as: the fat arrow, the rocket or the Lamda operator.
+Arrow functions are the new shorthand syntax for defining anonymous functions.  Arrow functions gets its name from its syntax `=>`, which in other languages, is knows as: the fat arrow, the rocket or the Lamda operator.
 
 ```js
 // ES5
@@ -324,13 +330,14 @@ foods.forEach(function(food) {
 ```
 
 ```js
-// ES6
+// ES2015
 let foods = ["pizza", "mac n cheese", "lasagna"];
 foods.forEach((food) => {
   console.log(`I love ${food}`);
 });
 ```
-You could get access to each element in this array using a `for` loop.  However, the forEach() method is a method on an array that will iterate through the array.  You pass in a function to the forEach method, and tell it what you want to do with each item (via the param(food, in this case)) in the array.
+
+You can get access to each element in this array using a `for` loop.  However, the forEach() method is a method on an array that will iterate through the array.  You pass in a function to the forEach method, and tell it what you want to do with each item (via the param - (food, in this case)) in the array.
 
 ```js
 // ES5- with a for loop
@@ -340,22 +347,22 @@ for(var i = 0; i < foods.length; i++) {
 }
 ```
 
-Even more concise syntax:
+You can write the whole arrow function on one line, and if you only have one parameter, you don't have to put it in parens.  Check out this even more concise syntax:
 
 ```js
-// ES6
+// ES2015
 let foods = ["pizza", "mac n cheese", "lasagna"];
 foods.forEach(food => console.log(`I love ${food}`));
 ```
 
-If there is more than one parameter in the function, wrap them in parens:
+If there is more than one parameter in the function, make sure to wrap them in parens:
 
 ```js
 let foods = ["pizza", "mac n cheese", "lasagna"];
 foods.forEach((food, i) => console.log(`My #${i} favorite food is ${food}`));
 ```
 
-Arrow functions also have the benefit of not changing the value of `this`.
+[SIDE NOTE] Arrow functions also have the benefit of not changing the value of `this`.
 
 Additionally, the `return` statement is not needed with single line arrow functions. There is an **implicit return**.
 
@@ -366,29 +373,26 @@ function subtract(x, y) { x + y; }
 ```
 
 ```js
-// ES6
+// ES2015
 let add = (x, y) => x + y;
 add(2, 3); //5
 ```
 
-If the function is multi-line, you will need to explicitly return:
+If the function is on multiple lines, you will need to **explicitly return**:
 
 ```js
+// ES2015
 let add = (x, y) => {
   return x + y;
 }
 add(2, 3);
 ```
 
-## Modern Browsers
-
-Make sure that if you are using Chrome, you enable the experimental javascript flag by going to `chrome://flags`. And then relaunch Chrome.
-
 ## Legacy Browser Support
 
 Support for ES2015 is growing! - https://kangax.github.io/compat-table/es6/
 
-If you need to support a legacy browser, check out the following transpilers.  A transpiler will convert one language into another.  In this case, it will convert your ES6 code back into ES5.
+If you need to support a legacy browser (depending on your user), check out the following transpilers.  A transpiler will convert one language into another.  In this case, it will convert your ES6 code back into ES5.
 - [Traceur](https://github.com/google/traceur-compiler/wiki/Getting-Started)
   - project ran by google, which takes ES6 code and compiles it to ES5.
   - it doesn't support all of ES6.
@@ -400,7 +404,7 @@ If you need to support a legacy browser, check out the following transpilers.  A
 - [Babel](https://babeljs.io/)
 - [Addy osmani ES6 Tools](https://github.com/addyosmani/es6-tools)
 
-** You need to make sure that you are supporting the browsers that your users are using. **
+**You always need to make sure that you are supporting the browsers that your users are using. If they can't use your site because it is 'too modern' you will lose them.**
 
 <br />
 
@@ -410,21 +414,29 @@ If you need to support a legacy browser, check out the following transpilers.  A
 
 The spread operator `...` allows an expression to be expanded into multiple elements.
 
-This is useful for separating an array into individual elements:
+This is useful when you would like to separate an array into individual elements:
 
 ```js
+// ES5
 var dimensions = [10, 5, 2];
 var volume = function(height, width, length) {
   return height * width * length;
 }
-// ES5
-volume(dimensions[0], dimensions[1], dimensions[2]);
 
-// ES6
+volume(dimensions[0], dimensions[1], dimensions[2]);
+```
+
+```js
+// ES2015
+var dimensions = [10, 5, 2];
+var volume = function(height, width, length) {
+  return height * width * length;
+}
+
 volume(...dimensions);
 ```
 
-You can also add two arrays together. Without the spread operator, you would be adding they array of a into nums, instead of the two arrays being added seamlessly together.
+You can also use the spread operator to add two arrays together. 
 
 ```ES5
 var a = [4, 5, 6];
@@ -434,7 +446,11 @@ nums;
 > [1, 2, 3, [4, 5, 6], 7, 8, 9]
 ```
 
-```ES6
+Notice that without the spread operator, the array doesn't just get the values of 'a'.  It actually creates an array of a within the nums array.  
+
+The spread operator will seamlessly add the two arrays together.
+
+```ES2015
 var a = [4, 5, 6];
 var nums = [1, 2, 3, ...a, 7, 8, 9];
 
@@ -503,3 +519,4 @@ There are a lot of features in ES6 that we have not covered:
 - [More History](https://benmccormick.org/2015/09/14/es5-es6-es2016-es-next-whats-going-on-with-javascript-versioning/)
 - [ES6 Compatibility](https://kangax.github.io/compat-table/es6/)
 - [Can I Use](http://caniuse.com/)
+- [JavaScript Tips](http://javascriptissexy.com/12-simple-yet-powerful-javascript-tips/)
