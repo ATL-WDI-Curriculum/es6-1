@@ -49,6 +49,8 @@ the new syntax.
 ## You Do
 Take 15 minutes to read through this article: [Getting Started with ECMAScript 6](http://blog.teamtreehouse.com/get-started-ecmascript-6) from the Treehouse blog.  If you have time leftover, you can read about the differences between [Understanding ES5, ES2015 and TypeScript](https://johnpapa.net/es5-es2015-typescript/).
 
+<br />
+
 ## Support Modern Browsers
 
 Make sure that if you are using Chrome, you enable the experimental javascript flag by going to [Chrome Flags](chrome://flags). And then relaunch Chrome.
