@@ -94,7 +94,7 @@ myFunction();
 // will print out 1, 2
 ```
 
-ES2015 introduces the concept of block scoping, which allows us to limit the scope of a variable declared with [let](http://es6-features.org/#BlockScopedVariables) to a given block `{ ... }`. It also avoids variables hoisting, as a variable is only declared/assigned where it exists within our code.
+[let](http://es6-features.org/#BlockScopedVariables): ES2015 introduces the concept of block scoping, which allows us to limit the scope of a variable declared with `let` to a given block `{ ... }`. It also avoids variables hoisting, as a variable is only declared/assigned where it exists within our code.
 
 ```js
 // ES2015
@@ -132,12 +132,9 @@ console.log("outside loop:", j);
 
 #### `const`
 
-ES2015 introduces another keyword for declaring variables: [const]([Const](http://es6-features.org/#Constants))
+[Const](http://es6-features.org/#Constants): ES2015 introduces another keyword for declaring variables called `const`. `const` is an identifier for variables that can not be reassigned and are considered read only variables. It is not a constant variable, but a constant reference to your variable.
 
-In ES5, if you want to declare a variable that will remain constant, it is a common practice to write the name in all uppercase letters.  However, this will not prevent the variable from being reassigned, but it is more of a note to other developers about your intention.
-
-`const` is an identifier for variables that will not be reassigned/read only variables:
-  - not a constant variable, but a constant reference
+In ES5, if you want to declare a variable that should remain constant, it is a common practice to write the name in all uppercase letters.  However, this will not prevent the variable from being reassigned. It is used more as a note to other developers about your intention for that variable.
 
 ```js
 const a = 1;
